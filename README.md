@@ -1,32 +1,16 @@
-# 🚗💨AI-Solutions-for-intelligent-vehicles
+# 🌟 Improving Patient Experience Using AI:
+AI has the potential to significantly reduce inefficiencies in healthcare, improve patient flow and experience, and enhance caregiver experience and patient safety throughout the care pathway. For example, AI can be applied to the remote monitoring of patients (e.g., intelligent telehealth through wearables/sensors) to identify and provide timely care for patients at risk of deterioration.
 
-## 📥 Importing the dataset needed for the project:
-For developing the code I worked with PVS 1 from the linked dataset below in order to keep development smooth and working with smaller dataset for the models first before later explanding to the full dataset.
+In the long term, AI systems will become more intelligent, enabling AI healthcare systems to achieve a state of precision medicine through AI-augmented healthcare and connected care. Healthcare will shift from the traditional one-size-fits-all form of medicine to a preventative, personalized, data-driven disease management model. This approach aims to achieve improved patient outcomes (enhanced patient and clinical experiences of care) in a more cost-effective delivery system.
 
 ## 🧮 Dataset:
-the dataset used for this project is the PVS dataset from the following link:
-https://www.kaggle.com/datasets/jefmenegazzo/pvs-passive-vehicular-sensors-datasets
+the dataset used for this project is from the following link:
+https://www.kaggle.com/datasets/smmmmmmmmmmmm/synthetic-dataset-for-ai-in-healthcare
 
-From this, the following files were used and will be used for the other PVS datasets:
-- dataset_lables.csv
-- dataset_gps.csv
-- dataset_mpu_left.csv
-- dataset_mpu_right.csv
-- dataset_gps_mpu_left.csv
-- dataset_gps_mpu_right.csv
 
 ## 🔄 Pre processing:
 ### Missing Values:
 __Checking:__
-- gps data:
-    - ageofdgpsdata = 1467
-    - dgpsid = 1467
-    - activity = 1467
-    - annotation = 1467
-- mpu data left = none
-- mpu data right = none
-- combined gps and mpu data left = none
-- combined gps and mpu data right = none
 
 __Handling:__
 The values missing in data_gps (1467 values in each column) means that for those columns all the values are missing, since they don't offer contribution to the dataset, they can be safely removed without causing any issues.
