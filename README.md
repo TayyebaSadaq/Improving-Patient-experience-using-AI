@@ -13,7 +13,6 @@ https://www.kaggle.com/datasets/smmmmmmmmmmmm/synthetic-dataset-for-ai-in-health
 __Checking:__
 
 __Handling:__
-The values missing in data_gps (1467 values in each column) means that for those columns all the values are missing, since they don't offer contribution to the dataset, they can be safely removed without causing any issues.
 
 ## 🤖 Models:
 
