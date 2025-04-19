@@ -16,6 +16,20 @@ From this, the following files were used and will be used for the other PVS data
 - dataset_gps_mpu_right.csv
 
 ## 🔄 Pre processing:
+### Missing Values:
+__Checking:__
+- gps data:
+    - ageofdgpsdata = 1467
+    - dgpsid = 1467
+    - activity = 1467
+    - annotation = 1467
+- mpu data left = none
+- mpu data right = none
+- combined gps and mpu data left = none
+- combined gps and mpu data right = none
+
+__Handling:__
+The values missing in data_gps (1467 values in each column) means that for those columns all the values are missing, since they don't offer contribution to the dataset, they can be safely removed without causing any issues.
 
 ## 🤖 Models:
 
