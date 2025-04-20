@@ -18,7 +18,7 @@ data.drop(columns=['Recovery_Time'], inplace=True)
 data.drop(columns=['Patient_ID', 'Hospital_Name', 'Doctor_Name' ], inplace=True)
 
 # Encode categorical columns
-categorical_columns = data.select_dtypes(include=['object']).
+categorical_columns = data.select_dtypes(include=['object']).columns
 data = pd.get_dummies(data, columns=categorical_columns, drop_first=True)
 print(data.info())
 
