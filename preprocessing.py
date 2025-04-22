@@ -35,3 +35,7 @@ scaler = StandardScaler()
 data[columns_to_scale] = scaler.fit_transform(data[columns_to_scale])
 print("After scaling:")
 print(data[numerical_columns].describe())
+
+## export preprocessed data for models.py
+data.to_csv("data/preprocessed_data.csv", index=False)
+print("Preprocessed data saved to data/preprocessed_data.csv")
