@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
 
 # MODEL IMPORTS #
 from sklearn.ensemble import RandomForestClassifier
@@ -38,10 +40,26 @@ print("Random Forest Model Results:")
 print(classification_report(y_test, y_pred_rf))
 print("Accuracy:", accuracy_score(y_test, y_pred_rf))
 
+# Confusion matrix for Random Forest
+print("\nRandom Forest Confusion Matrix:")
+cm_rf = confusion_matrix(y_test, y_pred_rf)
+disp_rf = ConfusionMatrixDisplay(confusion_matrix=cm_rf, display_labels=rf_model.classes_)
+disp_rf.plot(cmap="Blues")
+plt.title("Random Forest Confusion Matrix")
+plt.show()
+
 # logistic regression
 print("Logistic Regression Model Results:")
 print(classification_report(y_test, y_pred_lr))
 print("Accuracy:", accuracy_score(y_test, y_pred_lr))
+
+# Confusion matrix for Logistic Regression
+print("\nLogistic Regression Confusion Matrix:")
+cm_lr = confusion_matrix(y_test, y_pred_lr)
+disp_lr = ConfusionMatrixDisplay(confusion_matrix=cm_lr, display_labels=lr_model.classes_)
+disp_lr.plot(cmap="Blues")
+plt.title("Logistic Regression Confusion Matrix")
+plt.show()
 
 # --------------------------- IMPROVEMENTS: CROSS VALIDATION ---------------------------
 
@@ -85,10 +103,26 @@ print("\n=== Tuned Random Forest Model Results ===")
 print(classification_report(y_test, y_pred_rf_tuned))
 print("Accuracy:", accuracy_score(y_test, y_pred_rf_tuned))
 
+# Confusion matrix for Tuned Random Forest
+print("\nTuned Random Forest Confusion Matrix:")
+cm_rf_tuned = confusion_matrix(y_test, y_pred_rf_tuned)
+disp_rf_tuned = ConfusionMatrixDisplay(confusion_matrix=cm_rf_tuned, display_labels=rf_tuned.classes_)
+disp_rf_tuned.plot(cmap="Blues")
+plt.title("Tuned Random Forest Confusion Matrix")
+plt.show()
+
 # Evaluation of Tuned Logistic Regression
 print("\n=== Tuned Logistic Regression Model Results ===")
 print(classification_report(y_test, y_pred_lr_tuned))
 print("Accuracy:", accuracy_score(y_test, y_pred_lr_tuned))
+
+# Confusion matrix for Tuned Logistic Regression
+print("\nTuned Logistic Regression Confusion Matrix:")
+cm_lr_tuned = confusion_matrix(y_test, y_pred_lr_tuned)
+disp_lr_tuned = ConfusionMatrixDisplay(confusion_matrix=cm_lr_tuned, display_labels=lr_tuned.classes_)
+disp_lr_tuned.plot(cmap="Blues")
+plt.title("Tuned Logistic Regression Confusion Matrix")
+plt.show()
 
 # --------------------------- IMPROVEMENTS: SMOTE ---------------------------
 
@@ -113,7 +147,23 @@ print("\n=== Random Forest Model Results (with SMOTE) ===")
 print(classification_report(y_test, y_pred_rf_sm))
 print("Accuracy:", accuracy_score(y_test, y_pred_rf_sm))
 
+# Confusion matrix for Random Forest after SMOTE
+print("\nRandom Forest (with SMOTE) Confusion Matrix:")
+cm_rf_sm = confusion_matrix(y_test, y_pred_rf_sm)
+disp_rf_sm = ConfusionMatrixDisplay(confusion_matrix=cm_rf_sm, display_labels=rf_smote.classes_)
+disp_rf_sm.plot(cmap="Blues")
+plt.title("Random Forest (with SMOTE) Confusion Matrix")
+plt.show()
+
 # Evaluation of Logistic Regression after SMOTE
 print("\n=== Logistic Regression Model Results (with SMOTE) ===")
 print(classification_report(y_test, y_pred_lr_sm))
 print("Accuracy:", accuracy_score(y_test, y_pred_lr_sm))
+
+# Confusion matrix for Logistic Regression after SMOTE
+print("\nLogistic Regression (with SMOTE) Confusion Matrix:")
+cm_lr_sm = confusion_matrix(y_test, y_pred_lr_sm)
+disp_lr_sm = ConfusionMatrixDisplay(confusion_matrix=cm_lr_sm, display_labels=lr_smote.classes_)
+disp_lr_sm.plot(cmap="Blues")
+plt.title("Logistic Regression (with SMOTE) Confusion Matrix")
+plt.show()
