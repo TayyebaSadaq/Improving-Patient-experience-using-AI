@@ -20,7 +20,7 @@ The patient is classified as 'At_Risk' if their recovery time is greater than 5 
 1. **preprocessing.py**: This file contains the code for pre-processing the dataset.
 2. **model.py**: This file contains the code for training the models and making predictions.
 3. **main.py**: This file contains the main function that runs the code.
-4. **Improving patient experience using AI.pptx**: this file contains the presentation slides for the project.
+
 ## How to run the code:
 1. Clone the repository to your local machine.
 2. Install the required libraries using pip:
